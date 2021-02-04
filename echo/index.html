@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>Echo</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script>
+            "use strict";
+            
+            // kopiere hier deine Funktion laenge hin
+            function laenge(str) {
+                return str.length;
+            }
+            
+            function click() {
+                let eingabe = document.getElementById("idEingabe").value;
+                let ausgabe = "Die Länge der Eingabe " + eingabe + " ist " + laenge(eingabe) + ".";
+		        document.getElementById("idAusgabeHtml").innerHTML = Ausgabe;
+            }
+
+		</script>
+	</head>
+
+	<body>
+		<h1>Länge</h1>
+		Eingabe: <input id="idEingabe" type="text" value="Franz"><br />
+		<button onClick="click();">Berechne die Länge der Eingabe</button><br /><br />
+		<div id="idAusgabe">Hier kommt beim Klicken auf den Button ein Echo.</div>
+	</body>
+</html>
