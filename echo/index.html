@@ -3,18 +3,18 @@
 		<title>Echo</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<script>
-            "use strict";
-            
-            // kopiere hier deine Funktion laenge hin
-            function laenge(str) {
-                return str.length;
-            }
-            
-            function click() {
-                let eingabe = document.getElementById("idEingabe").value;
-                let ausgabe = "Die Länge der Eingabe " + eingabe + " ist " + laenge(eingabe) + ".";
-		        document.getElementById("idAusgabeHtml").innerHTML = Ausgabe;
-            }
+			"use strict";
+
+			// kopiere hier deine Funktion laenge hin
+			function laenge(str) {
+				return str.length;
+		    	}
+
+			function click() {
+				let eingabe = document.getElementById("idEingabe").value;
+				let ausgabe = "Die Länge der Eingabe " + eingabe + " ist " + laenge(eingabe) + ".";
+				document.getElementById("idAusgabeHtml").innerHTML = Ausgabe;
+			}
 
 		</script>
 	</head>
