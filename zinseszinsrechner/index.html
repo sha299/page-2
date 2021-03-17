@@ -7,23 +7,21 @@
           "use strict";
      
           function fEuro(number) {
-
-
-
                return number;
           }
           
           
           function fRechner() {
-
-
                var vZinssatz = parseFloat(document.getElementById("idZinssatz").value);
                var vStartkapital = parseFloat(document.getElementById("idStartkapital").value);
                var vLaufzeit = parseFloat(document.getElementById("idLaufzeit").value);
+               
                var vZinsfaktor = 1 + vZinssatz / 100;
                var vEndkapital = vStartkapital * Math.pow(vZinsfaktor, vLaufzeit);
+               
                var vZinsen;
                var vKapitalJahresEnde;
+               
                var vJahr = 0;
                var vKapitalJahresAnfang = vStartkapital;
 
