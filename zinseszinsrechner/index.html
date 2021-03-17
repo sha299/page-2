@@ -4,44 +4,47 @@
      <meta http-equiv="Conten-Type" content="text/html; charset=utf-8">
 
      <script>
-     "use strict";
-     function fRechner () {
+          "use strict";
+     
+          function fEuro(number) {
 
-       var vZinssatz = parseFloat(document.getElementById("idZinssatz").value);
-       var vStartkapital = parseFloat(document.getElementById("idStartkapital").value);
-       var vLaufzeit = parseFloat(document.getElementById("idLaufzeit").value);
+
+
+               return number;
+          }
           
-       var vZinsfaktor = 1 + vZinssatz / 100;
-       var vEndkapital = vStartkapital * Math.pow(vZinsfaktor, vLaufzeit);
-       
-       var vZinsen;
-       var vKapitalJahresEnde;
-       var vJahr = 0;
-       var vKapitalJahresAnfang = vStartkapital;
-
-       var vAusgabe = "";
           
-       vAusgabe = vAusgabe + "Das Endkapital beträgt " + vEndkapital + ".<br><br>";
+          function fRechner() {
 
-       vAusgabe = vAusgabe + "<table border = 1> <br>";
-       vAusgabe = vAusgabe + "<tr><th>Jahr</th><th>Kapital am 1.1</th><th>Zins am 31.12</th><th>Kapital am 31.12</th></tr>";
 
-       while (vJahr <= vLaufzeit) {
+               var vZinssatz = parseFloat(document.getElementById("idZinssatz").value);
+               var vStartkapital = parseFloat(document.getElementById("idStartkapital").value);
+               var vLaufzeit = parseFloat(document.getElementById("idLaufzeit").value);
+               var vZinsfaktor = 1 + vZinssatz / 100;
+               var vEndkapital = vStartkapital * Math.pow(vZinsfaktor, vLaufzeit);
+               var vZinsen;
+               var vKapitalJahresEnde;
+               var vJahr = 0;
+               var vKapitalJahresAnfang = vStartkapital;
 
-         vZinsen = vKapitalJahresAnfang * (vZinssatz / 100);
-         vKapitalJahresEnde = vKapitalJahresAnfang + vZinsen;
-         vAusgabe = vAusgabe + "<tr><td>" + vJahr + "</td><td>" + vKapitalJahresAnfang + " € " + "</td><td>" + vZinsen + " € " + "</td><td>" + vKapitalJahresEnde + " € ";
+               var vAusgabe = "";
+               vAusgabe = vAusgabe + "Das Endkapital beträgt " + vEndkapital + ".<br><br>";
+               vAusgabe = vAusgabe + "<table border = 1> <br>";
+               vAusgabe = vAusgabe + "<tr><th>Jahr</th><th>Kapital am 1.1</th><th>Zins am 31.12</th><th>Kapital am 31.12</th></tr>";
 
-         vKapitalJahresAnfang = vKapitalJahresEnde
-         vJahr++;
-       }
+               while (vJahr <= vLaufzeit) {
+                    vZinsen = vKapitalJahresAnfang * (vZinssatz / 100);
+                    vKapitalJahresEnde = vKapitalJahresAnfang + vZinsen;
+                    vAusgabe = vAusgabe + "<tr><td>" + vJahr + "</td><td>" + vKapitalJahresAnfang + " € " + "</td><td>" + vZinsen + " € " + "</td><td>" + vKapitalJahresEnde + " € ";
 
-       vAusgabe = vAusgabe + "</table>";
-       document.getElementById("idAusgabe").innerHTML = vAusgabe;
+                    vKapitalJahresAnfang = vKapitalJahresEnde;
+                    vJahr++;
+               }
 
-    } 
-
-    </script>
+               vAusgabe = vAusgabe + "</table>";
+               document.getElementById("idAusgabe").innerHTML = vAusgabe;
+          } 
+          </script>
     </head>
 
 
