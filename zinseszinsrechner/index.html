@@ -23,33 +23,32 @@
 
        while (vJahr <= vLaufzeit) {
 
-          vZinsen = vKapitalJahresAnfang * (vZinssatz / 100);
-          vKapitalJahresEnde = vKapitalJahresAnfang + vZinsen;
-          vAusgabe = vAusgabe + "<tr><td>" + vKapitalJahresAnfang + "</td><td>" + vZinsen + " € " + " </td><td>" + vZinsen + " € " + "</td><td>" + vKapitalJahresEnde + " € ";
+         vZinsen = vKapitalJahresAnfang * (vZinssatz / 100);
+         vKapitalJahresEnde = vKapitalJahresAnfang + vZinsen;
+         vAusgabe = vAusgabe + "<tr><td>" + vKapitalJahresAnfang + "</td><td>" + vZinsen + " € " + " </td><td>" + vZinsen + " € " + "</td><td>" + vKapitalJahresEnde + " € ";
 
-          vJahr++;
-     }
+         vJahr++;
+       }
 
-     vAusgabe = vAusgabe + "</table>";
-     document.getElementById("idAusgabe").innerHTML = vAusgabe;
+       vAusgabe = vAusgabe + "</table>";
+       document.getElementById("idAusgabe").innerHTML = vAusgabe;
 
-    }
+    } 
 
-     </script>
+    </script>
+    </head>
 
-     </head>
 
+    <body>
+    <h1>Zinseszinsrechner</h1>
 
-     <body>
-     <h1>Zinseszinsrechner</h1>
+    Zinssatz : <input id="idZinssatz" type="text" value="2"><br>
+    Startkapital : <input id="idStartkapital" type="text" value="1000"><br>
+    Laufzeit: <input id="idLaufzeit" type="text" value="5"><br><br>
 
-     Zinssatz : <input id="idZinssatz" type="text" value="2"><br>
-     Startkapital : <input id="idStartkapital" type="text" value="1000"><br>
-     Laufzeit: <input id="idLaufzeit" type="text" value="5"><br><br>
+    <button onClick="fRechner()">Berechnen</button><br><br>
 
-     <button onClick="fRechner()">Berechnen</button><br><br>
+    <div id="idAusgabe">Klicken Sie auf den Button Berechnen, damit hier eine Tabelle erscheint...</div>
 
-     <div id="idAusgabe">Klicken Sie auf den Button Berechnen, damit hier eine Tabelle erscheint...</div>
-
-     </body>
-     </html>
+    </body>
+</html>
