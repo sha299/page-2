@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
     <title>Kostenfunktion</title>
  
     <script>
- 
         function rechne() {
- 
+            
             var kv = parseFloat(document.getElementById("kv").value);
             var kf = parseFloat(document.getElementById("kf").value);
             var start = parseFloat(document.getElementById("start").value);
@@ -20,7 +17,7 @@
             var gesamtkosten;
             var ausgabe = "";
  
-            ausgabe = ausgabe + "<table border = 1> <br>";
+            ausgabe = ausgabe + "<table border=1>";
             ausgabe = ausgabe + "<tr><th>x</th><th>K(x)</th></tr>";
  
             while (start <= ende) {
@@ -29,10 +26,11 @@
                 start = start + schrittweite;
             }
  
-            ausgabe = ausgabe + "</table>" + "<br>";
+            ausgabe = ausgabe + "</table>";
+            
             document.getElementById("ausgabe").innerHTML = ausgabe;
  
-}
+        }
     </script>
  
 </head>
