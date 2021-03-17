@@ -25,8 +25,9 @@
 
          vZinsen = vKapitalJahresAnfang * (vZinssatz / 100);
          vKapitalJahresEnde = vKapitalJahresAnfang + vZinsen;
-         vAusgabe = vAusgabe + "<tr><td>" + vKapitalJahresAnfang + "</td><td>" + vZinsen + " € " + " </td><td>" + vZinsen + " € " + "</td><td>" + vKapitalJahresEnde + " € ";
+         vAusgabe = vAusgabe + "<tr><td>" + vJahr + "</td><td>" + vKapitalJahresAnfang + "</td><td>" + vZinsen + " € " + " </td><td>" + vZinsen + " € " + "</td><td>" + vKapitalJahresEnde + " € ";
 
+         vKapitalJahresAnfang = vKapitalJahresEnde
          vJahr++;
        }
 
