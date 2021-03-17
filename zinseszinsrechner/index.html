@@ -11,7 +11,8 @@
        var vStartkapital = parseFloat(document.getElementById("idStartkapital").value);
        var vLaufzeit = parseFloat(document.getElementById("idLaufzeit").value);
           
-       var vEndkapital = vStartkapital * (1 + vZinssatz / 100);
+       var vZinsfaktor = 1 + vZinssatz / 100;
+       var vEndkapital = vStartkapital * Math.pow(vZinsfaktor, vLaufzeit);
        
        var vZinsen;
        var vKapitalJahresEnde;
